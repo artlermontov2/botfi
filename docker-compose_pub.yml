@@ -5,8 +5,8 @@ services:
     image: artbvr/botfi:2.0
     restart: always
     environment:
-      - BOT_TOKEN=5835877005:AAHn_UFVZN6gkdFK6rWUA8CW-C2qFQYIsPg
-      - TELEGRAM_ACCESS=428000687
+      - BOT_TOKEN=YOUR_BOT_TOKEN
+      - TELEGRAM_ACCESS=YOUR_USERID
     ports:
       - '5555:5000' 
     depends_on: 
