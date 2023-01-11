@@ -4,8 +4,8 @@ import pytz
 
 
 conn = psycopg2.connect(
-    dbname='finbot', user='postgres',
-    password='17da89zh',
+    dbname='name_db', user='postgres',
+    password='password',
     host='db', port='5432'
 )
 cur = conn.cursor()
