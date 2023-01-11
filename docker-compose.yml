@@ -17,9 +17,9 @@ services:
     container_name: server_database
     restart: always
     environment:
-      POSTGRES_DB: finbot
+      POSTGRES_DB: name_db
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 17da89zh
+      POSTGRES_PASSWORD: password
     volumes:
       - postgres_data:/var/lib/postgresql/data
   
