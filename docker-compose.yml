@@ -1,0 +1,35 @@
+version: '3.1'
+
+services: 
+  app: 
+    build: ./bot
+    restart: always
+    environment:
+      - BOT_TOKEN=5835877005:AAHn_UFVZN6gkdFK6rWUA8CW-C2qFQYIsPg
+      - TELEGRAM_ACCESS=428000687
+    ports:
+      - '5555:5000' 
+    depends_on: 
+      - db
+    volumes:
+      - ./bot:/app
+
+  db:
+    image: postgres
+    container_name: server_database
+    restart: always
+    environment:
+      POSTGRES_DB: finbot
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 17da89zh
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - '8888:8080'
+
+volumes:
+    postgres_data:
