@@ -9,7 +9,6 @@
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password</code></p>
 <p>Первый запуск <code>docker-compose up -d --build</code></p>
-<p>Последующий запуск запуск <code>docker-compose up -d --build</code></p>
+<p>Последующий запуск <code>docker-compose up -d</code></p>
 <p>Остановить <code>docker-compose down</code></p>
    
-
