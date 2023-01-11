@@ -6,6 +6,6 @@
 <p><code>environment:
       POSTGRES_DB: name_db
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-   </code>
-</p>
+      POSTGRES_PASSWORD: password</code></p>
+   
+
