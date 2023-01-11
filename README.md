@@ -8,6 +8,8 @@
       POSTGRES_DB: name_db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password</code></p>
-<p>Запуск <code>docker-compose up -d</code></p>
+<p>Первый запуск <code>docker-compose up -d --build</code></p>
+<p>Последующий запуск запуск <code>docker-compose up -d --build</code></p>
+<p>Остановить <code>docker-compose down</code></p>
    
 
