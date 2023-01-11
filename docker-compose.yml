@@ -2,7 +2,7 @@ version: '3.1'
 
 services: 
   app: 
-    image: artbvr/botfi:2.0
+    build: ./bot
     restart: always
     environment:
       - BOT_TOKEN=YOUR_BOT_TOKEN
@@ -11,6 +11,8 @@ services:
       - '5555:5000' 
     depends_on: 
       - db
+    volumes:
+      - ./bot:/app
 
   db:
     image: postgres
