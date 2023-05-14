@@ -1,18 +1,15 @@
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup as bs
 
 
 def usd_price() -> str:
     url = 'https://cbr.ru/scripts/XML_daily.asp'
 
-    source = requests.get(url)
-    main_text = source.text
-    soup = BeautifulSoup(main_text, features="html.parser")
-
-    valute = soup.find_all('valute')
-    row = str(valute[10])
-    price = row.split('>')[-3].replace('</value', '')
-    return f'Курс доллара ЦБ:\n{price}'
+    get_html = requests.get(url)
+    if get_html.status_code == 200:
+        soup = bs(get_html.content, 'html.parser')
+        rate = soup.find('valute', attrs={'id': 'R01235'}).find('value').text
+        return f'Курс доллара ЦБ:\n{rate}'
 
 
 
